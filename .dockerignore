@@ -1,0 +1,10 @@
+backend/.venv
+backend/chroma_db
+scraper/data/links_checkpoint.jsonl
+scraper/data/links_progress.json
+**/__pycache__
+**/*.pyc
+**/*.pyo
+extension/
+pipeline/
+api/

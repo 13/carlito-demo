@@ -1,0 +1,146 @@
+#ky2-ai-panel {
+  position: fixed;
+  right: 16px;
+  top: 70px;
+  width: 340px;
+  z-index: 2147483647;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+}
+
+#ky2-inner {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+#ky2-header {
+  background: #1a5276;
+  color: #fff;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: grab;
+  user-select: none;
+}
+
+#ky2-title {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+}
+
+#ky2-header button {
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 4px;
+  padding: 2px 6px;
+  line-height: 1;
+}
+
+#ky2-header button:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+#ky2-body {
+  padding: 12px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+#ky2-status {
+  color: #888;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 12px;
+}
+
+.ky2-error {
+  color: #c0392b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.ky2-empty {
+  color: #888;
+  text-align: center;
+  padding: 16px 0;
+  margin: 0;
+}
+
+.ky2-card {
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  background: #fafafa;
+}
+
+.ky2-card-top {
+  background: #eaf6ef;
+  border-color: #a9d9bb;
+}
+
+.ky2-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.ky2-subject {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.ky2-score {
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  padding: 2px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ky2-category {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 6px;
+  font-style: italic;
+}
+
+.ky2-solution {
+  color: #333;
+  line-height: 1.5;
+  font-size: 12px;
+  margin-bottom: 6px;
+  white-space: pre-wrap;
+}
+
+.ky2-id {
+  font-size: 11px;
+  color: #999;
+  margin-top: 4px;
+}
+
+.ky2-link {
+  font-size: 11px;
+  color: #1a5276;
+  text-decoration: none;
+  display: block;
+  margin-top: 4px;
+}
+
+.ky2-link:hover {
+  text-decoration: underline;
+}

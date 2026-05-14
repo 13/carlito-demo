@@ -1,0 +1,25 @@
+services:
+  api:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - chroma_db:/app/chroma_db
+      - hf_cache:/cache/huggingface
+      # tickets.jsonl mounted at /scraper/data so ingest.py's relative path works
+      - ./scraper/data:/scraper/data:ro
+    restart: unless-stopped
+
+  scraper:
+    build: ./scraper
+    environment:
+      - KY2_USER=${KY2_USER}
+      - KY2_PASS=${KY2_PASS}
+    volumes:
+      # output written back to the host so it survives container removal
+      - ./scraper/data:/app/data
+    # one-shot: run with `docker compose run --rm scraper`
+
+volumes:
+  chroma_db:
+  hf_cache:

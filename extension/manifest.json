@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "carlito",
+  "version": "1.0",
+  "description": "Zeigt ähnliche gelöste Incidents für das aktuell geöffnete ky2help-Ticket",
+
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://helpdesk.gvcc.net/*",
+    "http://localhost:8000/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://helpdesk.gvcc.net/site/site.php*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ]
+}
